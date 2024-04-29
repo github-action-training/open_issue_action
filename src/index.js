@@ -10,6 +10,7 @@ async function run() {
     const assignees = core.getInput("assignees");
 
     const octokit = github.getOctokit(token);
+    console.log(github.context)
 
     const response = await octokit.rest.issues.create({
       // owner: github.context.repo.owner,
